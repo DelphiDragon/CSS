@@ -1,0 +1,25 @@
+#wrap {
+    background-color: bisque; width: 400px; margin: 0 auto;
+}
+#wrap > :nth-of-type(1){
+  background-color: red;   
+}
+
+#wrap > :nth-of-type(2){
+  display: flex;
+  & > :nth-of-type(1) {
+    width : 50%;
+   background-color: chocolate;
+  }
+  & > :nth-of-type(2) {
+    width :50%;
+    background-color: black;
+
+  }
+  height: 200px;
+  background-color: greenyellow;   
+}
+
+#wrap > :nth-of-type(3){
+  background-color: blue;   
+}
