@@ -1,3 +1,38 @@
+#wrap2 {
+    background-color: bisque; width: 400px; margin: 0 auto;
+}
+#header{
+  background-color: red;  
+}
+#main{
+  background-color: aquamarine;  height: 100px; display: flex;
+}
+
+#footer{
+  background-color: brown;  
+
+}
+#list{
+    background-color: yellow; width:20%;
+}
+#section
+{
+    background-color: cadetblue;width:60%;
+}
+#section > div {
+    /* background-color: yellow; */
+    width :70%; margin:auto;
+    & div { border:2px solid; margin-top: 5px; background-color: yellow;}
+}
+
+#side
+{
+    background-color: yellow;width:20%;
+}
+
+
+
+
 #wrap {
     background-color: bisque; width: 400px; margin: 0 auto;
 }
