@@ -1,0 +1,35 @@
+#nav{
+    width: 700px; background-color: antiquewhite;
+
+}
+#nav > ul{ background-color: orange; list-style: none; padding: 0; 
+        display: flex; 
+        flex-wrap: wrap;
+        /* column 세로 or Row 가로 */
+        flex-direction: row;
+        height: 100px;
+        align-items: center;
+        /* 해당하는 li 끼리 맞춰서 정렬 */
+        justify-content: space-around;
+       /* justify-content: center   가운데 정렬*/
+
+}
+#nav >ul >li {
+    border :1px solid;width: 100px;
+     /* padding: 10px; */
+     height: 50px;
+     line-height: 50px;
+     text-align: center;
+}
+a{
+    /* 밑줄 없앤다 */
+    text-decoration: none;
+    color: white;
+    &:hover{
+        color: black;
+        border-bottom: 3px solid olive;
+        padding-bottom: 5px;
+
+        transition: 0.25s;
+    }
+}
