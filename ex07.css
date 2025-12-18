@@ -1,9 +1,14 @@
+/*
+  (총 width - 여백수(item개수-1) *여백witdh ) / item수= item width
+     ex) 300 - 2*20px /3 = bot width size(86.666)
+ */
+
 #div4{
     border:1px solid; width: 300px; height: 200px;
 }
 #div4 div{
-    display: inline-block; width: 95px; height: 100px; background-color: red; /* 인라인 블록으로 변경 (가로배치 사이즈 조정 가능)*/
-   margin-right: 7.5px;
+    display: inline-block; width: 86.666px; height: 100px; background-color: red; /* 인라인 블록으로 변경 (가로배치 사이즈 조정 가능)*/
+   margin-right: 20px;
 }
 /* 3의 배수 자식에게 지정 */
 #div4 div:nth-child(3n) {
