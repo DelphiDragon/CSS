@@ -34,7 +34,7 @@
     letter-spacing: 3px; 
     /* 폼테그 만큼 늘리기 */
     width : 100%;
-    & > focus{
+    &:focus{
         border-bottom:  2px solid darkgray;
     }
 }

@@ -1,0 +1,82 @@
+#modal {
+    position: absolute; background-color: rgb(0,0,0,0.1);
+    top: 0;
+    left: 0;
+}
+a {
+    position: absolute; z-index: 10; background-color: aqua;
+}
+
+#static2 ,#relative2, #absolute2, #fixed2{width :100px;height: 100px;}
+/* z-index 가장 높은 숫자가 앞으로 나오게 한다. */
+#static2 {background-color: rebeccapurple;z-index: 1;}
+#relative2 {background-color:  gray; position: relative; z-index: 2; top: -75px; left: 25px;}
+#absolute2 {background-color: aqua; position: absolute; z-index: 1; top:50px;left: 50px; }
+#fixed2{background-color:burlywood;position: fixed; z-index: 3; top:75px;left:75px;}
+
+
+
+#wrap {
+    width :300px; height: 800px; background-color: green;
+    /* 위에서부터 100px  떨어 뜨리고 가운대(좌우) 정렬 */
+    margin :300px auto;
+}
+#wrap > div{
+    width: 100px; height: 100px;
+ 
+}
+#wrap > div > div{
+    width: 50px; height: 50px; 
+}
+#relative{
+ background-color: red;
+  top : 300px;
+  left: 50px;
+  /* 기본 속성은 스테이틱 */
+
+  /* 부모태그에 영향을 받아 위치조정 */
+  position: relative;
+
+  & > div {
+    top : 50px;
+    left : 10px;
+
+    /* 부모속성을 따라서 설정 */
+    position : inherit;
+    background-color: black;
+
+  }
+}
+#absolute{
+    background-color: gold;
+    top : 300px;
+    right: 50px;
+    /* 창의 크기에 따라 이동 */
+    position: absolute;
+    & > div {
+        top : 10px;
+        left : 10px;
+
+        /* 부모속성을 따라서 설정 */
+        position : inherit;
+        background-color: black;
+
+    }        
+}
+#fixed{
+    background-color: navy;
+    top : 300px;
+    left: 50px;  
+    /* 화면 고정 */
+    position: fixed;
+    & > div {
+        top : 80px;
+        left : 10px;
+
+        /* 부모속성을 따라서 설정 */
+        position : inherit;
+        background-color: black;
+
+    }    
+
+}
