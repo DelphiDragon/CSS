@@ -1,0 +1,67 @@
+#header{
+  background-color: red;
+  width: 700px;
+  height: 120;
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#title_logo{
+    /* background-color: blue; */
+    & > img {
+        width: 30px;
+        height: 30px;
+        margin-left: 10px;
+        
+    }
+    display: flex;
+    width: 100px;
+    height: 120;
+}
+#nav {
+    top: 0px;
+    width: 600px;
+    border: 0px solid;
+    display: flex;
+            flex-direction: row ;
+        justify-content: space-between;
+
+    & > ul {
+        display: flex;
+             flex-direction: row ;
+        list-style: none;
+        padding: 0px;
+
+    }
+    & > :nth-child(2) {
+        font-size: small;
+        display: flex;
+        flex-direction: row ;
+        padding-right: 10px;
+        list-style: none;
+        padding: 0px; 
+
+    }
+    & > ul > li {
+        color: white;
+        padding-right: 10px;
+        & :hover {
+
+            border-bottom: 3px solid orange;
+            padding-bottom: 5px;
+
+            transition: 0.25s;            
+        }
+
+    }
+}
+a{
+    /* 밑줄 없앤다 */
+    text-decoration: none;
+    color: white;
+    &:hover{
+        color: orange;
+        padding-bottom: 5px;
+
+        transition: 0.25s;
+    }
