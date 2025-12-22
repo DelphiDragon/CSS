@@ -1,0 +1,12 @@
+#div1 { width: 300px; height: 300px;
+    border-radius: 100%; background-color: red;
+    overflow: hidden;
+}
+img { width: 300px; height: 300px; transition: 3s; }
+#div1:hover {
+    & img{ transform:scale(4) rotate(720deg);  }
+    & ~ #div2{ transition: 0.5s; margin-top: 0px; color: navy; }
+}
+#div2 { width: 300px; text-align: center; margin-top: -170px;
+    font-size: 30px; color: white; transition: 3s; 
+}

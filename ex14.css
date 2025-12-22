@@ -1,0 +1,60 @@
+#div1, #div2 ,#div3 {
+    width:200px;height: 200px;
+    background-image: url("134099831372289464.jpg");
+    background-size: cover;
+}
+#div1{
+    margin: 200px; 
+    /* 5도 회전시켜라 */
+    transform: rotate(5deg);
+}
+
+#div2{
+    margin-top: -300px; 
+    margin-left: 300px;
+    /* 5도 회전시켜라 */
+    transform: rotate(-5deg);
+    transition: 1s;
+}
+#div2:hover {transform: rotate(1420deg);}
+
+#div3{
+    margin :100px;
+    &:hover{
+        transform: scale(1.5);
+    }
+}
+#div4, #div5 {
+    /* 지정된 범위에서 벗어나면 안보이게 한다. */
+    overflow: hidden; 
+    width: 150px; height: 150px;
+    background-color: gray;
+    border: 10px solid red;
+    margin-left: 200px;
+    & img{width: 150px;height: 150px;}
+
+}
+
+#div4 img:hover {
+    width: 180px;height: 180px;
+}
+#div5 img:hover {
+    transform: scale(1.5);
+}
+#div6,#div7{
+    width: 150px;height: 150px;background-color: green;
+    transition:3s;
+}
+
+#div6:hover {
+    margin-left: 400px;
+}
+
+#div7:hover {
+  transform: translateX(400px);
+}
+#div8 {
+    width: 150px;height: 150px; background-color: gold; transition: 3s;
+    /* 속성 여러개 부여 할때는 공백을 통해서 한다. */
+    &:hover{transform: translateX(400px) rotate(360deg);}
+}

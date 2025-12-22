@@ -1,0 +1,120 @@
+h1 {
+    /* 흐려지는거 */
+    opacity: 0;
+    /* top left 로 움직일 수 있다. */
+    position: relative;
+}
+#left {
+    left : -150px;
+    animation: left 3s;
+    /* 되돌아가진 않는다. */
+    animation-fill-mode: forwards;
+}
+#right{
+    right: -500px;
+    animation: right 3s;
+}
+@keyframes left {
+    100% {left:300px; opacity: 1;}
+}
+
+
+@keyframes right {
+    100% {right:-150px; opacity: 1;}
+}
+
+#wrap {
+    width: 100px;margin: 200px auto; background-color: bisque;
+}
+.block{
+    width: 50px;height: 8px;margin-bottom: 15px;
+    background-color: navy;
+    animation:  block 1s infinite;
+}
+/* 동시지정 가능한 유일한 방식 ex) 2n 2n+1 */
+#wrap :nth-of-type(2n) {
+ animation-delay: 0.3s;
+}
+
+/* #wrap :nth-of-type(1) {
+ animation-delay: 0.3s;
+}
+#wrap :nth-of-type(3) {
+ animation-delay: 0.3s;
+} */
+@keyframes block {
+    50% {transform: translateX(50px);}
+}
+
+#loading{display: flex; justify-content: center;} /* 가로 배치*/
+h2{
+    text-align: center;
+}
+.logo {
+    width: 20px;height: 20px; background-color: navy;
+    border-radius: 20px; margin: 0 10px;
+    animation:  loading 1s infinite;
+}
+#loading :nth-of-type(2){
+    animation-delay: 0.2s;
+}
+#loading :nth-of-type(3){
+    animation-delay: 0.4s;
+}
+@keyframes loading {
+    50% {
+        /* 확대 1이 기본 이니까 0은 안보이게 */
+        transform:  scale(0);
+    }
+}
+
+#div1{
+    width: 200px;height: 200px; background-color: red;
+    /* abcd 사용자 지정 이름 몇초안에 끝낼꺼냐  */
+    animation: abcd 10s;
+}
+@keyframes abcd{
+    /* 20% 2초안에 마진 레프트 400px 실행하고 */
+    20% { margin-left: 400px;}
+}
+
+
+#div2{
+    width: 200px;height: 200px; background-color: red;
+    /* abcd 사용자 지정 이름 몇초안에 끝낼꺼냐  */
+    animation: aaa 10s;
+}
+@keyframes aaa{
+    /* 100% 10초안에 마진 레프트 400px 실행하고 */
+    100% { margin-left: 400px; background-color: green;}
+}
+
+#div3{
+    width: 200px;height: 200px; background-color: red;
+    /* 무한반복 동작 infinite */
+    animation: bbb 5s infinite;
+    /* 시작시 딜레이 설정 */
+    animation-delay:  2s; /* 2초후에 동작 */
+
+}
+
+@keyframes bbb{
+    /* 100% 10초안에 마진 레프트 400px 실행하고 */
+    50% { margin-left: 400px; background-color: green;}
+}
+
+
+#div4{
+    width: 100px;height: 100px; background-color: gold;
+    /* 무한반복 동작 infinite */
+    animation: box 4s infinite;
+
+}
+
+@keyframes box{
+    /* 100% 10초안에 마진 레프트 400px 실행하고 */
+    25% { margin-left: 400px; margin-top: 0;}
+    50% { margin-left: 400px; margin-top: 50px;}
+    75% { margin-left: 0px; margin-top: 50px;}
+    100% { margin-left: 0px; margin-top: 0px;}
+}
